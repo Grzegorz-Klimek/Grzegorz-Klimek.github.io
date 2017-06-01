@@ -1,0 +1,416 @@
+//***************************************** VARIABLES/MIXINS *****************************************
+$small: 'only screen and (min-width: 768px)';
+$medium: 'only screen and (min-width: 992px)';
+$large: 'only screen and (min-width: 1200px)';
+
+$font-basic: #eee;
+$font-dark: #252525;
+$accent-color: #FFC700;
+
+@mixin accent-gradient() {
+  background-image: linear-gradient(to top right, lighten($accent-color, 20%), $accent-color, lighten($accent-color, 20%));
+}
+
+@mixin background-dark() {
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+}
+
+@mixin background-middle() {
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+}
+
+@mixin background-light() {
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
+}
+
+@mixin shadow-content(){
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin shadow-text(){
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+@mixin flex-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+//***************************************** GLOBAL *****************************************
+
+body {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  padding-top: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: $font-basic;
+}
+
+.container-fluid, .row {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.6em;
+  @media #{$medium}{
+    font-size: 4em;
+  }
+}
+
+h2 {
+  font-size: 2.827em;
+}
+
+h3 {
+  font-size: 1.999em;
+}
+
+h4{
+  font-size: 0.9em;
+  @media #{$medium}{
+    font-size: 1.414em;
+  }
+}
+
+.dark-overlay {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.6;
+}
+
+//***************************************** NAV *****************************************
+
+.navbar {
+  @include background-dark();
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  i {
+    margin-right: 0.5em;
+  }
+  .navbar-brand {
+    margin: 5px;
+    transition: all 0.5s;
+    color: $accent-color;
+    font-size: 1.5em;
+    &:hover {
+      color: $font-basic;
+      cursor: pointer;
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  transition: all 0.5s;
+  margin: 5px;
+  margin-right: 10px;
+  color: darken($font-basic, 20%);
+  &:hover {
+    background-color: $accent-color;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+//***************************************** HOME *****************************************
+
+section#home {
+  position: relative;
+  @include shadow-text();
+  background: no-repeat center scroll;
+  background-size: 100%;
+  @media #{$medium}{
+    background-attachment: fixed;
+  }
+  text-align: center;
+  background-image: url(../img/home.jpg);
+  .container-fluid {
+    padding: 1em;
+    @media #{$medium}{
+      padding: 14em 3em;
+    }
+  }
+  i {
+    font-size: 3em;
+    margin: 0.2em;
+    color: $font-basic;
+    @include background-dark();
+    padding: 0.5em;
+    border-radius: 100%;
+  }
+  .btn-custom{
+    width: 20em;
+    font-size: 1em;
+    transition: all 0.5s;
+    margin: 0 auto;
+    @include flex-align();
+    @include background-dark();
+    @include shadow-content();
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $font-basic;
+    border: 2px solid transparent;
+    font-weight: 900;
+    border-radius: 51px;
+    padding: 0.5em 1em;
+    letter-spacing: 0.06em;
+    &:hover{
+      color: lighten($font-basic, 20%);
+      border-color: $accent-color;
+      @include shadow-text();
+    }
+    display: none;
+    @media #{$medium}{
+      display: block;
+    }
+  }
+}
+
+//***************************************** ABOUT *****************************************
+
+section#about {
+  color: $font-dark;
+  padding: 1em;
+  @include background-light();
+  i {
+    color: $accent-color;
+    margin-right: 0.5em;
+  }
+  .about-content {
+    padding: 1em;
+    @media #{$medium}{
+      padding: 0 3em;
+    }
+  }
+  img {
+    padding: 5px;
+    @include accent-gradient();
+    display: none;
+    @media #{$medium}{
+      display: block;
+    }
+  }
+  .divider-flat {
+    display: block;
+    width: 100%;
+    height: 0.3em;
+    margin: 1em 0;
+    @include accent-gradient();
+  }
+  @media #{$medium}{
+    padding: 15em 3em;
+    padding-bottom: 5em;
+  }
+}
+
+//***************************************** WORK *****************************************
+
+section#work {
+  text-align: center;
+  padding: 1em;
+  @include background-light();
+  color: $font-dark;
+  @media #{$medium}{
+    padding: 8em 3em;
+  }
+  .project {
+    position: relative;
+    height: 300px;
+    border: 3px solid $accent-color;
+    margin: 1em;
+    @include accent-gradient();
+    transition: all 1s;
+    overflow: hidden
+  }
+  .tile-1{
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include flex-align();
+    top: 0;
+  }
+  .tile-2{
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include flex-align();
+    flex-direction: column;
+    @include accent-gradient();
+    top: -300px;
+    color: $font-basic;
+    @include shadow-text();
+    i{
+      font-size: 3em;
+      padding: 0.5em;
+      display: block;
+      color: $font-basic;
+      border: 3px solid $accent-color;
+      border-radius: 100%;
+      @include shadow-content();
+      @include background-dark();
+    }
+    .content{
+      margin-top: 0.5em;
+      padding: 0.5em 2em;
+      border: 3px solid $accent-color;
+      border-radius: 1em;
+      @include background-dark();
+      ul{
+        padding-left: 1em;
+        text-align: left;
+        list-style-type: square;
+      }
+    }
+
+  }
+  .project:hover > .tile-1{
+    top: 300px;
+  }
+  .project:hover > .tile-2{
+    top: 0;
+  }
+  .house{
+    background: url(../img/house.jpg) center no-repeat;
+    background-size: 130%;
+  }
+  .paint{
+    background: url(../img/paint.jpg) center no-repeat;
+    background-size: 140%;
+  }
+  .plumb{
+    background: url(../img/plumb.jpg) center no-repeat;
+    background-size: 140%;
+  }
+}
+
+//***************************************** CONTACT *****************************************
+
+section#contact {
+  background: url("../img/contact.jpg") no-repeat center;
+  background-attachment: scroll;
+  background-size: 100%;
+  position: relative;
+  color: $font-basic;
+  text-align: center;
+  @media #{$medium}{
+    background-attachment: fixed;
+  }
+  a{
+    text-decoration: none;
+    transition: all 0.5s;
+    color: $font-basic;
+    display: inline-block;
+    margin: 0.1em;
+    padding-top: 0.3em;
+    border-radius: 100%;
+    border: 1px solid $font-basic;
+    width: 2.1em;
+    height: 2.1em;
+    font-size: 1.5em;
+    @include background-dark();
+    position: relative;
+    &:hover{
+      color: $accent-color;
+      border-color: $accent-color;
+      cursor: pointer;
+    }
+    @media #{$medium}{
+      padding-top: 0.5em;
+      width: 2.5em;
+      height: 2.5em;
+      font-size: 3em;
+      border: 3px solid $font-basic;
+    }
+  }
+  .container-fluid{
+    padding: 1em;
+    @media #{$medium}{
+      padding: 8em 3em;
+    }
+  }
+}
+
+//***************************************** FOOTER *****************************************
+
+footer{
+  @include background-dark();
+  padding: 1em;
+  @media #{$medium}{
+    padding: 5em 3em;
+  }
+  .footer-up{
+    a{
+      display: inline-block;
+      text-align: center;
+      width: 1.8em;
+      height: 1.8em;
+      font-size: 1.5em;
+      margin-right: 0.2em;
+      padding-top: 0.1em;
+      border-radius: 100%;
+      transition: all 0.5s;
+      border: 2px solid $accent-color;
+      text-decoration: none;
+      color: $accent-color;
+      &:hover{
+        color: $font-basic;
+        border-color: $font-basic;
+      }
+    }
+    h3{
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+    ul{
+      text-transform: uppercase;
+      list-style-type: none;
+      color: $accent-color;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    .invite{
+      text-align: center;
+    }
+    .tile{
+      padding-bottom: 2em;
+    }
+  }
+  .footer-down{
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 3em 0;
+    text-align: center;
+    margin-top: 0;
+    @media #{$medium}{
+      margin-top: 4em;
+    }
+    a{
+      transition: all 0.5s;
+      text-decoration: none;
+      color: $accent-color;
+      &:hover{
+        color: darken($accent-color, 20%);
+      }
+    }
+  }
+}

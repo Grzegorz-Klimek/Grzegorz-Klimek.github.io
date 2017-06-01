@@ -1,0 +1,318 @@
+body {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  padding-top: 60px;
+  font-family: 'Roboto', sans-serif;
+  color: #eee; }
+
+.container-fluid, .row {
+  padding: 0;
+  margin: 0; }
+
+h1, h2, h3, h4 {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 1.6em; }
+  @media only screen and (min-width: 992px) {
+    h1 {
+      font-size: 4em; } }
+
+h2 {
+  font-size: 2.827em; }
+
+h3 {
+  font-size: 1.999em; }
+
+h4 {
+  font-size: 0.9em; }
+  @media only screen and (min-width: 992px) {
+    h4 {
+      font-size: 1.414em; } }
+
+.dark-overlay {
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 0.6; }
+
+.navbar {
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-bottom: none;
+  margin-bottom: 0;
+  padding: 10px;
+  font-size: 1.3em;
+  text-transform: uppercase; }
+  .navbar i {
+    margin-right: 0.5em; }
+  .navbar .navbar-brand {
+    margin: 5px;
+    transition: all 0.5s;
+    color: #FFC700;
+    font-size: 1.5em; }
+    .navbar .navbar-brand:hover {
+      color: #eee;
+      cursor: pointer; }
+
+.navbar-inverse .navbar-nav > li > a {
+  transition: all 0.5s;
+  margin: 5px;
+  margin-right: 10px;
+  color: #bbbbbb; }
+  .navbar-inverse .navbar-nav > li > a:hover {
+    background-color: #FFC700;
+    color: white;
+    cursor: pointer; }
+
+section#home {
+  position: relative;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  background: no-repeat center scroll;
+  background-size: 100%;
+  text-align: center;
+  background-image: url(../img/home.jpg); }
+  @media only screen and (min-width: 992px) {
+    section#home {
+      background-attachment: fixed; } }
+  section#home .container-fluid {
+    padding: 1em; }
+    @media only screen and (min-width: 992px) {
+      section#home .container-fluid {
+        padding: 14em 3em; } }
+  section#home i {
+    font-size: 3em;
+    margin: 0.2em;
+    color: #eee;
+    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+    padding: 0.5em;
+    border-radius: 100%; }
+  section#home .btn-custom {
+    width: 20em;
+    font-size: 1em;
+    transition: all 0.5s;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eee;
+    border: 2px solid transparent;
+    font-weight: 900;
+    border-radius: 51px;
+    padding: 0.5em 1em;
+    letter-spacing: 0.06em;
+    display: none; }
+    section#home .btn-custom:hover {
+      color: white;
+      border-color: #FFC700;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+    @media only screen and (min-width: 992px) {
+      section#home .btn-custom {
+        display: block; } }
+
+section#about {
+  color: #252525;
+  padding: 1em;
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png); }
+  section#about i {
+    color: #FFC700;
+    margin-right: 0.5em; }
+  section#about .about-content {
+    padding: 1em; }
+    @media only screen and (min-width: 992px) {
+      section#about .about-content {
+        padding: 0 3em; } }
+  section#about img {
+    padding: 5px;
+    background-image: linear-gradient(to top right, #ffdd66, #FFC700, #ffdd66);
+    display: none; }
+    @media only screen and (min-width: 992px) {
+      section#about img {
+        display: block; } }
+  section#about .divider-flat {
+    display: block;
+    width: 100%;
+    height: 0.3em;
+    margin: 1em 0;
+    background-image: linear-gradient(to top right, #ffdd66, #FFC700, #ffdd66); }
+  @media only screen and (min-width: 992px) {
+    section#about {
+      padding: 15em 3em;
+      padding-bottom: 5em; } }
+
+section#work {
+  text-align: center;
+  padding: 1em;
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
+  color: #252525; }
+  @media only screen and (min-width: 992px) {
+    section#work {
+      padding: 8em 3em; } }
+  section#work .project {
+    position: relative;
+    height: 300px;
+    border: 3px solid #FFC700;
+    margin: 1em;
+    background-image: linear-gradient(to top right, #ffdd66, #FFC700, #ffdd66);
+    transition: all 1s;
+    overflow: hidden; }
+  section#work .tile-1 {
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0; }
+  section#work .tile-2 {
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(to top right, #ffdd66, #FFC700, #ffdd66);
+    top: -300px;
+    color: #eee;
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3); }
+    section#work .tile-2 i {
+      font-size: 3em;
+      padding: 0.5em;
+      display: block;
+      color: #eee;
+      border: 3px solid #FFC700;
+      border-radius: 100%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png); }
+    section#work .tile-2 .content {
+      margin-top: 0.5em;
+      padding: 0.5em 2em;
+      border: 3px solid #FFC700;
+      border-radius: 1em;
+      background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png); }
+      section#work .tile-2 .content ul {
+        padding-left: 1em;
+        text-align: left;
+        list-style-type: square; }
+  section#work .project:hover > .tile-1 {
+    top: 300px; }
+  section#work .project:hover > .tile-2 {
+    top: 0; }
+  section#work .house {
+    background: url(../img/house.jpg) center no-repeat;
+    background-size: 130%; }
+  section#work .paint {
+    background: url(../img/paint.jpg) center no-repeat;
+    background-size: 140%; }
+  section#work .plumb {
+    background: url(../img/plumb.jpg) center no-repeat;
+    background-size: 140%; }
+
+section#contact {
+  background: url("../img/contact.jpg") no-repeat center;
+  background-attachment: scroll;
+  background-size: 100%;
+  position: relative;
+  color: #eee;
+  text-align: center; }
+  @media only screen and (min-width: 992px) {
+    section#contact {
+      background-attachment: fixed; } }
+  section#contact a {
+    text-decoration: none;
+    transition: all 0.5s;
+    color: #eee;
+    display: inline-block;
+    margin: 0.1em;
+    padding-top: 0.3em;
+    border-radius: 100%;
+    border: 1px solid #eee;
+    width: 2.1em;
+    height: 2.1em;
+    font-size: 1.5em;
+    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+    position: relative; }
+    section#contact a:hover {
+      color: #FFC700;
+      border-color: #FFC700;
+      cursor: pointer; }
+    @media only screen and (min-width: 992px) {
+      section#contact a {
+        padding-top: 0.5em;
+        width: 2.5em;
+        height: 2.5em;
+        font-size: 3em;
+        border: 3px solid #eee; } }
+  section#contact .container-fluid {
+    padding: 1em; }
+    @media only screen and (min-width: 992px) {
+      section#contact .container-fluid {
+        padding: 8em 3em; } }
+
+footer {
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
+  padding: 1em; }
+  @media only screen and (min-width: 992px) {
+    footer {
+      padding: 5em 3em; } }
+  footer .footer-up a {
+    display: inline-block;
+    text-align: center;
+    width: 1.8em;
+    height: 1.8em;
+    font-size: 1.5em;
+    margin-right: 0.2em;
+    padding-top: 0.1em;
+    border-radius: 100%;
+    transition: all 0.5s;
+    border: 2px solid #FFC700;
+    text-decoration: none;
+    color: #FFC700; }
+    footer .footer-up a:hover {
+      color: #eee;
+      border-color: #eee; }
+  footer .footer-up h3 {
+    text-align: center;
+    margin-bottom: 0.5em; }
+  footer .footer-up ul {
+    text-transform: uppercase;
+    list-style-type: none;
+    color: #FFC700;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+  footer .footer-up .invite {
+    text-align: center; }
+  footer .footer-up .tile {
+    padding-bottom: 2em; }
+  footer .footer-down {
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 3em 0;
+    text-align: center;
+    margin-top: 0; }
+    @media only screen and (min-width: 992px) {
+      footer .footer-down {
+        margin-top: 4em; } }
+    footer .footer-down a {
+      transition: all 0.5s;
+      text-decoration: none;
+      color: #FFC700; }
+      footer .footer-down a:hover {
+        color: #997700; }
+
+/*# sourceMappingURL=style.css.map */
