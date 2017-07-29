@@ -1,0 +1,29 @@
+@mixin accent-gradient() {
+  background-image: linear-gradient(to top right, lighten($accent-color, 20%), $accent-color, lighten($accent-color, 20%));
+}
+
+@mixin background-dark() {
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png) #111;
+}
+
+@mixin background-middle() {
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png) #333;
+}
+
+@mixin background-light() {
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
+}
+
+@mixin shadow-content(){
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@mixin shadow-text(){
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+@mixin flex-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

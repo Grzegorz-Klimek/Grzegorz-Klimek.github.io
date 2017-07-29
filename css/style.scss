@@ -1,41 +1,5 @@
-//***************************************** VARIABLES/MIXINS *****************************************
-$small: 'only screen and (min-width: 768px)';
-$medium: 'only screen and (min-width: 992px)';
-$large: 'only screen and (min-width: 1200px)';
-
-$font-basic: #eee;
-$font-dark: #252525;
-$accent-color: #FFC700;
-
-@mixin accent-gradient() {
-  background-image: linear-gradient(to top right, lighten($accent-color, 20%), $accent-color, lighten($accent-color, 20%));
-}
-
-@mixin background-dark() {
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
-}
-
-@mixin background-middle() {
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png);
-}
-
-@mixin background-light() {
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
-}
-
-@mixin shadow-content(){
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-@mixin shadow-text(){
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
-
-@mixin flex-align{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@import 'variables.scss';
+@import 'mixins.scss';
 
 //***************************************** GLOBAL *****************************************
 
@@ -74,7 +38,7 @@ h3 {
   font-size: 1.999em;
 }
 
-h4{
+h4 {
   font-size: 0.9em;
   @media #{$medium}{
     font-size: 1.414em;
@@ -130,16 +94,16 @@ h4{
 
 //***************************************** HOME *****************************************
 
-section#home {
-  position: relative;
+section.home {
   @include shadow-text();
+  position: relative;
   background: no-repeat center scroll;
   background-size: 100%;
+  text-align: center;
+  background-image: url(../img/home.jpg);
   @media #{$medium}{
     background-attachment: fixed;
   }
-  text-align: center;
-  background-image: url(../img/home.jpg);
   .container-fluid {
     padding: 1em;
     @media #{$medium}{
@@ -147,21 +111,21 @@ section#home {
     }
   }
   i {
+    @include background-dark();
     font-size: 3em;
     margin: 0.2em;
     color: $font-basic;
-    @include background-dark();
     padding: 0.5em;
     border-radius: 100%;
   }
-  .btn-custom{
+  .btn-custom {
+    @include flex-align();
+    @include background-dark();
+    @include shadow-content();
     width: 20em;
     font-size: 1em;
     transition: all 0.5s;
     margin: 0 auto;
-    @include flex-align();
-    @include background-dark();
-    @include shadow-content();
     text-decoration: none;
     text-transform: uppercase;
     color: $font-basic;
@@ -170,10 +134,9 @@ section#home {
     border-radius: 51px;
     padding: 0.5em 1em;
     letter-spacing: 0.06em;
-    &:hover{
-      color: lighten($font-basic, 20%);
-      border-color: $accent-color;
+    &:hover {
       @include shadow-text();
+      background-color: darken($accent-color, 10%);
     }
     display: none;
     @media #{$medium}{
@@ -184,10 +147,10 @@ section#home {
 
 //***************************************** ABOUT *****************************************
 
-section#about {
+section.about {
+  @include background-light();
   color: $font-dark;
   padding: 1em;
-  @include background-light();
   i {
     color: $accent-color;
     margin-right: 0.5em;
@@ -199,19 +162,19 @@ section#about {
     }
   }
   img {
-    padding: 5px;
     @include accent-gradient();
+    padding: 5px;
     display: none;
     @media #{$medium}{
       display: block;
     }
   }
   .divider-flat {
+    @include accent-gradient();
     display: block;
     width: 100%;
     height: 0.3em;
     margin: 1em 0;
-    @include accent-gradient();
   }
   @media #{$medium}{
     padding: 15em 3em;
@@ -221,59 +184,59 @@ section#about {
 
 //***************************************** WORK *****************************************
 
-section#work {
+section.work {
+  @include background-light();
   text-align: center;
   padding: 1em;
-  @include background-light();
   color: $font-dark;
   @media #{$medium}{
     padding: 8em 3em;
   }
   .project {
+    @include accent-gradient();
     position: relative;
     height: 300px;
     border: 3px solid $accent-color;
     margin: 1em;
-    @include accent-gradient();
     transition: all 1s;
     overflow: hidden
   }
-  .tile-1{
+  .tile-1 {
+    @include flex-align();
     transition: all 1s;
     position: absolute;
     width: 100%;
     height: 100%;
-    @include flex-align();
     top: 0;
   }
-  .tile-2{
+  .tile-2 {
+    @include flex-align();
+    @include accent-gradient();
+    @include shadow-text();
     transition: all 1s;
     position: absolute;
     width: 100%;
     height: 100%;
-    @include flex-align();
     flex-direction: column;
-    @include accent-gradient();
     top: -300px;
     color: $font-basic;
-    @include shadow-text();
-    i{
+    i {
+      @include shadow-content();
+      @include background-dark();
       font-size: 3em;
       padding: 0.5em;
       display: block;
       color: $font-basic;
       border: 3px solid $accent-color;
       border-radius: 100%;
-      @include shadow-content();
-      @include background-dark();
     }
-    .content{
+    .content {
+      @include background-dark();
       margin-top: 0.5em;
       padding: 0.5em 2em;
       border: 3px solid $accent-color;
       border-radius: 1em;
-      @include background-dark();
-      ul{
+      ul {
         padding-left: 1em;
         text-align: left;
         list-style-type: square;
@@ -281,21 +244,21 @@ section#work {
     }
 
   }
-  .project:hover > .tile-1{
+  .project:hover > .tile-1 {
     top: 300px;
   }
-  .project:hover > .tile-2{
+  .project:hover > .tile-2 {
     top: 0;
   }
-  .house{
+  .house {
     background: url(../img/house.jpg) center no-repeat;
     background-size: 130%;
   }
-  .paint{
+  .paint {
     background: url(../img/paint.jpg) center no-repeat;
     background-size: 140%;
   }
-  .plumb{
+  .plumb {
     background: url(../img/plumb.jpg) center no-repeat;
     background-size: 140%;
   }
@@ -303,7 +266,7 @@ section#work {
 
 //***************************************** CONTACT *****************************************
 
-section#contact {
+section.contact {
   background: url("../img/contact.jpg") no-repeat center;
   background-attachment: scroll;
   background-size: 100%;
@@ -313,7 +276,8 @@ section#contact {
   @media #{$medium}{
     background-attachment: fixed;
   }
-  a{
+  a {
+    @include background-dark();
     text-decoration: none;
     transition: all 0.5s;
     color: $font-basic;
@@ -325,9 +289,8 @@ section#contact {
     width: 2.1em;
     height: 2.1em;
     font-size: 1.5em;
-    @include background-dark();
     position: relative;
-    &:hover{
+    &:hover {
       color: $accent-color;
       border-color: $accent-color;
       cursor: pointer;
@@ -340,7 +303,7 @@ section#contact {
       border: 3px solid $font-basic;
     }
   }
-  .container-fluid{
+  .container-fluid {
     padding: 1em;
     @media #{$medium}{
       padding: 8em 3em;
@@ -350,14 +313,14 @@ section#contact {
 
 //***************************************** FOOTER *****************************************
 
-footer{
+footer {
   @include background-dark();
   padding: 1em;
   @media #{$medium}{
     padding: 5em 3em;
   }
-  .footer-up{
-    a{
+  .footer-up {
+    a {
       display: inline-block;
       text-align: center;
       width: 1.8em;
@@ -370,16 +333,16 @@ footer{
       border: 2px solid $accent-color;
       text-decoration: none;
       color: $accent-color;
-      &:hover{
+      &:hover {
         color: $font-basic;
         border-color: $font-basic;
       }
     }
-    h3{
+    h3 {
       text-align: center;
       margin-bottom: 0.5em;
     }
-    ul{
+    ul {
       text-transform: uppercase;
       list-style-type: none;
       color: $accent-color;
@@ -387,14 +350,14 @@ footer{
       padding: 0;
       text-align: center;
     }
-    .invite{
+    .invite {
       text-align: center;
     }
-    .tile{
+    .tile {
       padding-bottom: 2em;
     }
   }
-  .footer-down{
+  .footer-down {
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.05em;
@@ -404,11 +367,11 @@ footer{
     @media #{$medium}{
       margin-top: 4em;
     }
-    a{
+    a {
       transition: all 0.5s;
       text-decoration: none;
       color: $accent-color;
-      &:hover{
+      &:hover {
         color: darken($accent-color, 20%);
       }
     }
