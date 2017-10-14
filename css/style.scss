@@ -105,7 +105,10 @@ section.home {
     background-attachment: fixed;
   }
   .container-fluid {
-    padding: 1em;
+    padding: 3em;
+    @media #{$small}{
+      padding: 8em;
+    }
     @media #{$medium}{
       padding: 14em 3em;
     }
