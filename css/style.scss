@@ -6,12 +6,25 @@
 //*************************
 
 body {
-  text-align: justify;
+  text-align: center;
+  font-weight: 400;
   padding: 0;
   margin: 0;
   padding-top: 60px;
   font-family: 'Roboto', sans-serif;
   color: $fontBasic;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 .container-fluid, .row {
@@ -31,35 +44,6 @@ body {
 .highlight {
   color: $accent;
 }
-
-html {font-size: 1em;}
-
-body {
-  font-weight: 400;
-  line-height: 1.45;
-}
-
-p {margin-bottom: 1.3em;}
-
-h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
-}
-
-h1 {
-  margin-top: 0;
-  font-size: 3.157em;
-}
-
-h2 {font-size: 2.369em;}
-
-h3 {font-size: 1.777em;}
-
-h4 {font-size: 1.333em;}
-
-small, .font_small {font-size: 0.75em;}
-
 
 //*************************
 //******** NAVBAR  ********
@@ -96,7 +80,7 @@ small, .font_small {font-size: 0.75em;}
   border-bottom: 3px solid transparent;
   &:hover {
     @include shadow-text();
-    background-color: darken($accent,20%);
+    background-color: darken($accent, 20%);
     border-color: darken($accent, 5%);
     color: $fontBasic;
     cursor: pointer;
@@ -147,12 +131,12 @@ section.home {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 900;
-    padding: 1em 3em;
+    padding: 1em 3em 1.2em 3em;
     letter-spacing: 0.06em;
-    border: .5px solid transparent;
+    border: 3px solid transparent;
     &:hover {
       @include shadow-text();
-      border-color: $accent;
+      border-bottom-color: $accent;
       color: $accent;
     }
     display: none;
@@ -170,26 +154,34 @@ section.about {
   @include background-light();
   color: $fontDark;
   padding: 1em;
+  h1, h2{
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+    @media #{$small} {
+      text-align: left
+    }
+  }
+  h3 {
+    text-align: justify;
+    padding: 0 0.5em;
+    @media #{$small} {
+      padding: 0 2em;
+    }
+  }
   i {
     color: $accent;
     margin-right: 0.5em;
   }
-  .about-content {
-  }
   img {
     @include accent-gradient();
-    padding: 5px;
+    padding: 1em;
+    margin-top: 2.5em;
     display: none;
     @media #{$medium}{
       display: block;
     }
-  }
-  .divider-flat {
-    @include accent-gradient();
-    display: block;
-    width: 100%;
-    height: 0.3em;
-    margin: 1em 0;
   }
   @media #{$medium}{
     padding: 15em 3em;
