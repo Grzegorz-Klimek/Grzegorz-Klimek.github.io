@@ -74,15 +74,14 @@ h3 {
 
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
-  margin: 10px;
+  margin: 10px 15px;
   color: darken($fontBasic, 20%);
   border-radius: 2px 2px 0 0;
   border-bottom: 3px solid transparent;
   &:hover {
     @include shadow-text();
-    background-color: darken($accent, 20%);
     border-color: darken($accent, 5%);
-    color: $fontBasic;
+    color: $accent;
     cursor: pointer;
   }
 }
@@ -97,7 +96,7 @@ section.home {
   background: no-repeat center scroll;
   text-align: center;
   background-image: url(../img/home.jpg);
-  background-size: 150%;
+  background-size: cover;
   @media #{$medium}{
     background-size: 100%;
     background-attachment: fixed;
@@ -109,6 +108,12 @@ section.home {
     }
     @media #{$medium}{
       padding: 10em 3em;
+    }
+  }
+  h2 {
+    font-size: 2em;
+    @media #{$small}{
+      font-size: 3em
     }
   }
   i {
@@ -125,7 +130,7 @@ section.home {
     @include background-dark();
     color: $fontBasic;
     font-size: 1em;
-    width: 30%;
+    width: 90%;
     transition: all 0.5s;
     margin: 0 auto;
     text-decoration: none;
@@ -139,9 +144,11 @@ section.home {
       border-bottom-color: $accent;
       color: $accent;
     }
-    display: none;
+    @media #{$small}{
+      width: 60%;
+    }
     @media #{$medium}{
-      display: block;
+      width: 30%;
     }
   }
 }
@@ -156,28 +163,31 @@ section.about {
   padding: 1em;
   h1, h2{
     text-align: center;
+    margin-bottom: 0;
   }
   h2 {
     text-align: center;
-    @media #{$small} {
-      text-align: left
-    }
+    padding: 0 0.5em;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 0;
   }
   h3 {
     text-align: justify;
     padding: 0 0.5em;
     @media #{$small} {
-      padding: 0 2em;
+      padding: 0 3em;
+      padding-right: 2em;
     }
   }
   i {
-    color: $accent;
+    color: darken($accent, 15%);
     margin-right: 0.5em;
   }
   img {
     @include accent-gradient();
     padding: 1em;
-    margin-top: 2.5em;
+    margin-top: 0.5em;
     display: none;
     @media #{$medium}{
       display: block;
@@ -197,6 +207,7 @@ section.work {
   @include background-light();
   text-align: center;
   color: $fontDark;
+  padding: 3em 1em;
   @media #{$medium}{
     padding: 8em 3em;
   }
@@ -205,7 +216,7 @@ section.work {
     position: relative;
     height: 300px;
     border: 3px solid $accent;
-    margin: 1em;
+    margin: -15px;
     transition: all 1s;
     overflow: hidden
   }

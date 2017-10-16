@@ -52,15 +52,14 @@ h3 {
 
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
-  margin: 10px;
+  margin: 10px 15px;
   color: #bbbbbb;
   border-radius: 2px 2px 0 0;
   border-bottom: 3px solid transparent; }
   .navbar-inverse .navbar-nav > li > a:hover {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    background-color: #bfa10e;
     border-color: #efcd2a;
-    color: #eee;
+    color: #F1D342;
     cursor: pointer; }
 
 section.home {
@@ -69,7 +68,7 @@ section.home {
   background: no-repeat center scroll;
   text-align: center;
   background-image: url(../img/home.jpg);
-  background-size: 150%; }
+  background-size: cover; }
   @media only screen and (min-width: 992px) {
     section.home {
       background-size: 100%;
@@ -82,6 +81,11 @@ section.home {
     @media only screen and (min-width: 992px) {
       section.home .container-fluid {
         padding: 10em 3em; } }
+  section.home h2 {
+    font-size: 2em; }
+    @media only screen and (min-width: 768px) {
+      section.home h2 {
+        font-size: 3em; } }
   section.home i {
     background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png) #111;
     font-size: 3em;
@@ -97,7 +101,7 @@ section.home {
     background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/black_mamba.png) #111;
     color: #eee;
     font-size: 1em;
-    width: 30%;
+    width: 90%;
     transition: all 0.5s;
     margin: 0 auto;
     text-decoration: none;
@@ -105,40 +109,45 @@ section.home {
     font-weight: 900;
     padding: 1em 3em 1.2em 3em;
     letter-spacing: 0.06em;
-    border: 3px solid transparent;
-    display: none; }
+    border: 3px solid transparent; }
     section.home .btn-custom:hover {
       text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
       border-bottom-color: #F1D342;
       color: #F1D342; }
+    @media only screen and (min-width: 768px) {
+      section.home .btn-custom {
+        width: 60%; } }
     @media only screen and (min-width: 992px) {
       section.home .btn-custom {
-        display: block; } }
+        width: 30%; } }
 
 section.about {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
   color: #252525;
   padding: 1em; }
   section.about h1, section.about h2 {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 0; }
   section.about h2 {
-    text-align: center; }
-    @media only screen and (min-width: 768px) {
-      section.about h2 {
-        text-align: left; } }
+    text-align: center;
+    padding: 0 0.5em;
+    font-weight: 600;
+    font-size: 1.5em;
+    margin-top: 0; }
   section.about h3 {
     text-align: justify;
     padding: 0 0.5em; }
     @media only screen and (min-width: 768px) {
       section.about h3 {
-        padding: 0 2em; } }
+        padding: 0 3em;
+        padding-right: 2em; } }
   section.about i {
-    color: #F1D342;
+    color: #d7b510;
     margin-right: 0.5em; }
   section.about img {
     background-image: linear-gradient(to top right, #f8e9a1, #F1D342, #f8e9a1);
     padding: 1em;
-    margin-top: 2.5em;
+    margin-top: 0.5em;
     display: none; }
     @media only screen and (min-width: 992px) {
       section.about img {
@@ -151,7 +160,8 @@ section.about {
 section.work {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
   text-align: center;
-  color: #252525; }
+  color: #252525;
+  padding: 3em 1em; }
   @media only screen and (min-width: 992px) {
     section.work {
       padding: 8em 3em; } }
@@ -160,7 +170,7 @@ section.work {
     position: relative;
     height: 300px;
     border: 3px solid #F1D342;
-    margin: 1em;
+    margin: -15px;
     transition: all 1s;
     overflow: hidden; }
   section.work .tile-1 {
