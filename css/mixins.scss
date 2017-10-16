@@ -1,5 +1,5 @@
 @mixin accent-gradient() {
-  background-image: linear-gradient(to top right, lighten($accent-color, 20%), $accent-color, lighten($accent-color, 20%));
+  background-image: linear-gradient(to top right, lighten($accent, 20%), $accent, lighten($accent, 20%));
 }
 
 @mixin background-dark() {
