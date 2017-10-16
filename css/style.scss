@@ -28,6 +28,39 @@ body {
   opacity: 0.6;
 }
 
+.highlight {
+  color: $accent;
+}
+
+html {font-size: 1em;}
+
+body {
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+
 //*************************
 //******** NAVBAR  ********
 //*************************
@@ -91,7 +124,7 @@ section.home {
       padding: 8em;
     }
     @media #{$medium}{
-      padding: 14em 3em;
+      padding: 10em 3em;
     }
   }
   i {
@@ -105,22 +138,22 @@ section.home {
   .btn-custom {
     @include flex-align();
     @include shadow-content();
-    width: 20em;
+    @include background-dark();
+    color: $fontBasic;
     font-size: 1em;
+    width: 30%;
     transition: all 0.5s;
     margin: 0 auto;
     text-decoration: none;
     text-transform: uppercase;
-    color: $fontBasic;
-    border: 2px solid transparent;
     font-weight: 900;
-    border-radius: 51px;
-    padding: 0.5em 1em;
+    padding: 1em 3em;
     letter-spacing: 0.06em;
-    border: 2px solid darken($accent, 20%);
+    border: .5px solid transparent;
     &:hover {
       @include shadow-text();
-      background-color: darken($accent, 10%);
+      border-color: $accent;
+      color: $accent;
     }
     display: none;
     @media #{$medium}{
