@@ -257,12 +257,13 @@ section.contact {
     font-size: 2.5em;
     border: 3px solid #eee;
     border-radius: 100%;
-    z-index: 5; }
+    opacity: 0.8; }
     section.contact a:hover {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       border-color: #F1D342;
       cursor: pointer;
-      transform: scale(1.05) rotate(15deg); }
+      transform: scale(1.05) rotate(15deg);
+      opacity: 1; }
     section.contact a:after {
       content: " ";
       position: absolute;

@@ -317,12 +317,13 @@ section.contact {
     font-size: 2.5em;
     border: 3px solid $fontBasic;
     border-radius: 100%;
-    z-index: 5;
+    opacity: 0.8;
     &:hover {
       @include shadow-content();
       border-color: $accent;
       cursor: pointer;
       transform: scale(1.05) rotate(15deg);
+      opacity: 1;
     }
 
     &:after {
