@@ -238,35 +238,41 @@ section.contact {
   text-align: center;
   background-attachment: fixed; }
   section.contact h1 {
-    font-size: 2em; }
+    font-size: 2.5em;
+    margin-top: 1em; }
     @media only screen and (min-width: 768px) {
       section.contact h1 {
         font-size: 3em; } }
   section.contact a {
     background: #050505;
+    position: relative;
     text-decoration: none;
     transition: all 0.5s;
     color: #eee;
     display: inline-block;
-    margin: 0.1em;
-    padding-top: 0.3em;
+    margin: 0.4em;
+    padding-top: 0.6em;
+    width: 2.8em;
+    height: 2.8em;
+    font-size: 2.5em;
+    border: 3px solid #eee;
     border-radius: 100%;
-    border: 1px solid #eee;
-    width: 2.1em;
-    height: 2.1em;
-    font-size: 1.5em;
-    position: relative; }
+    z-index: 5; }
     section.contact a:hover {
-      color: #F1D342;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       border-color: #F1D342;
-      cursor: pointer; }
-    @media only screen and (min-width: 992px) {
-      section.contact a {
-        padding-top: 0.5em;
-        width: 2.5em;
-        height: 2.5em;
-        font-size: 3em;
-        border: 3px solid #eee; } }
+      cursor: pointer;
+      transform: scale(1.05) rotate(15deg); }
+    section.contact a:after {
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      border: 2px solid #F1D342;
+      border-radius: 100%; }
   section.contact .container-fluid {
     padding: 1em; }
     @media only screen and (min-width: 992px) {
