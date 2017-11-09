@@ -310,10 +310,10 @@ section.contact {
   form {
     font-size: 1.5em;
     input, textarea {
-      background: $fontDark;
+      background: darken($fontDark, 5%);
       outline: none;
-      border: 2px solid darken($fontDark, 3%);
       margin: 1em 0;
+      border: 3px solid $fontDark;
       min-height: 2em;
       text-align: center;
       color: lighten($fontDark, 40%);

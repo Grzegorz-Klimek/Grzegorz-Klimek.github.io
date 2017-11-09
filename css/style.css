@@ -248,10 +248,10 @@ section.contact {
   section.contact form {
     font-size: 1.5em; }
     section.contact form input, section.contact form textarea {
-      background: #252525;
+      background: #181818;
       outline: none;
-      border: 2px solid #1d1d1d;
       margin: 1em 0;
+      border: 3px solid #252525;
       min-height: 2em;
       text-align: center;
       color: #8b8b8b;
