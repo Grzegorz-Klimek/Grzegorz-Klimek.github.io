@@ -326,8 +326,6 @@ section.contact {
     span.fa {
       margin-right: 0.5em;
       color: $accent;
-      border-right: 3px solid $accent;
-      padding-right: 10px;
     }
   }
   .form-info {
@@ -357,7 +355,7 @@ section.contact {
     }
     input[type="submit"] {
       @include custom-transition();
-      background: darken($accent, 10%);
+      background: $accent;
       color: darken($fontDark, 10%);
       padding: 0.5em 2em;
       text-transform: uppercase;
@@ -366,7 +364,7 @@ section.contact {
       border-radius: 5px;
       &:hover {
         cursor: pointer;
-        background: $accent;
+        background: darken($accent, 10%);
       }
     }
   }
