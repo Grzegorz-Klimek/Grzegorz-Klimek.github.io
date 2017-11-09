@@ -303,41 +303,6 @@ section.contact {
       font-size: 3em;
     }
   }
-  a {
-    @include background-dark();
-    position: relative;
-    text-decoration: none;
-    transition: all 0.5s;
-    color: $fontBasic;
-    display: inline-block;
-    margin: 0.4em;
-    padding-top: 0.6em;
-    width: 2.8em;
-    height: 2.8em;
-    font-size: 2.5em;
-    border: 3px solid $fontBasic;
-    border-radius: 100%;
-    opacity: 0.8;
-    &:hover {
-      @include shadow-content();
-      border-color: $accent;
-      cursor: pointer;
-      transform: scale(1.05) rotate(15deg);
-      opacity: 1;
-    }
-
-    &:after {
-      content: " ";
-      position: absolute;
-      z-index: -1;
-      top: 2px;
-      left: 2px;
-      right: 2px;
-      bottom: 2px;
-      border: 2px solid $accent;
-      border-radius: 100%;
-    }
-  }
   .container-fluid {
     padding: 1em;
     @media #{$medium}{
