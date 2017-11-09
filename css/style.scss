@@ -89,7 +89,7 @@ h3 {
 
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
-  margin: 10px 15px;
+  margin: 10px;
   color: darken($fontBasic, 20%);
   border-radius: 2px 2px 0 0;
   border-bottom: 3px solid transparent;
@@ -175,7 +175,9 @@ section.home {
 section.about {
   @include background-light();
   color: $fontDark;
-  padding: 1em;
+  padding: 2em .5em;
+  padding-top: 4em;
+  overflow: hidden;
   @media #{$medium}{
     padding: 10em 3em;
     padding-bottom: 5em;
@@ -205,24 +207,35 @@ section.about {
   i {
     color: $fontDark;
     margin: .3em;
-    margin-right: .5em;
+    @media #{$medium} {
+      margin-right: .5em;
+    }
   }
   .about-photo {
+    position: relative;
+    z-index: 1;
     img {
       @include accent-gradient();
-      padding: .5em;
       display: none;
-      @media #{$medium}{
+      transform: scale(1.3) scaleX(-1);
+      @media #{$large}{
         display: block;
+      }
+      @media #{$large} {
+        margin: 1.5em 3em 0 -2em;
+        border-radius: 15px;
       }
     }
   }
   .about-content {
-    background: rgba(255, 225, 71, .3);
-    border: 1px solid rgba(255, 225, 71, .6);
-    padding: 1em 0;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 225, 71, .5);
+    padding: 1em;
+    border-radius: 5px;
     @media #{$medium}{
-      padding: 4em 2em;
+      padding: 4em;
+      border-radius: 15px;
     }
   }
 }

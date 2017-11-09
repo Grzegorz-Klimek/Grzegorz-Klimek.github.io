@@ -63,7 +63,7 @@ h3 {
 
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
-  margin: 10px 15px;
+  margin: 10px;
   color: #b7b7b7;
   border-radius: 2px 2px 0 0;
   border-bottom: 3px solid transparent; }
@@ -135,7 +135,9 @@ section.home {
 section.about {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
   color: #252525;
-  padding: 1em; }
+  padding: 2em .5em;
+  padding-top: 4em;
+  overflow: hidden; }
   @media only screen and (min-width: 992px) {
     section.about {
       padding: 10em 3em;
@@ -160,22 +162,34 @@ section.about {
         padding-right: 2em; } }
   section.about i {
     color: #252525;
-    margin: .3em;
-    margin-right: .5em; }
-  section.about .about-photo img {
-    background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
-    padding: .5em;
-    display: none; }
+    margin: .3em; }
     @media only screen and (min-width: 992px) {
-      section.about .about-photo img {
-        display: block; } }
+      section.about i {
+        margin-right: .5em; } }
+  section.about .about-photo {
+    position: relative;
+    z-index: 1; }
+    section.about .about-photo img {
+      background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
+      display: none;
+      transform: scale(1.3) scaleX(-1); }
+      @media only screen and (min-width: 1200px) {
+        section.about .about-photo img {
+          display: block; } }
+      @media only screen and (min-width: 1200px) {
+        section.about .about-photo img {
+          margin: 1.5em 3em 0 -2em;
+          border-radius: 15px; } }
   section.about .about-content {
-    background: rgba(255, 225, 71, 0.3);
-    border: 1px solid rgba(255, 225, 71, 0.6);
-    padding: 1em 0; }
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 225, 71, 0.5);
+    padding: 1em;
+    border-radius: 5px; }
     @media only screen and (min-width: 992px) {
       section.about .about-content {
-        padding: 4em 2em; } }
+        padding: 4em;
+        border-radius: 15px; } }
 
 section.work {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
