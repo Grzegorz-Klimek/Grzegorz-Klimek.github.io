@@ -300,9 +300,6 @@ section.contact {
   h1 {
     font-size: 2.5em;
     margin: 1em;
-    @media #{$small} {
-      font-size: 3em;
-    }
   }
   .container-fluid {
     padding: 1em;
@@ -339,19 +336,32 @@ section.contact {
     }
     input#contactform-email, input#contactform-name {
       width: 100%;
+      @media #{$small} {
+        width: 50%;
+      }
+      @media #{$medium} {
+        width: 90%;
+      }
     }
   }
   .form-message {
     padding-top: 0;
     @media #{$medium} {
-      padding-top: 3em;
+      padding-top: 2em;
     }
     .contactform-message {
       padding: 1em 0;
       padding-top: 2em;
       margin: 1em 0;
-      width: 90%;
+      width: 100%;
       min-height: 13em;
+      @media #{$small} {
+        width: 80%;
+      }
+      @media #{$medium} {
+        width: 90%;
+        padding-top: 5em;
+      }
     }
     input[type="submit"] {
       @include custom-transition();
@@ -364,6 +374,7 @@ section.contact {
       border-radius: 5px;
       &:hover {
         cursor: pointer;
+        background: darken($accent, 10%);
       }
     }
   }
