@@ -1,4 +1,4 @@
-$('#animate-button').hover(
+$('#animated-button').hover(
     function() {
         $(this).toggleClass('bounce');
     }
