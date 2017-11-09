@@ -56,6 +56,10 @@ h3 {
       cursor: pointer; }
       .navbar .navbar-brand:hover .navbar-photo {
         transform: scaleX(-1); }
+  .navbar .navbar-header {
+    min-height: 75px; }
+  .navbar .navbar-toggle {
+    margin-top: 20px; }
 
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
@@ -74,7 +78,7 @@ section.home {
   position: relative;
   background: no-repeat center scroll;
   text-align: center;
-  background-image: url(../img/home.jpg);
+  background-image: url(../media/tools.jpg);
   background-size: cover; }
   @media only screen and (min-width: 992px) {
     section.home {
@@ -132,37 +136,46 @@ section.about {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
   color: #252525;
   padding: 1em; }
+  @media only screen and (min-width: 992px) {
+    section.about {
+      padding: 10em 3em;
+      padding-bottom: 5em; } }
   section.about h1, section.about h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 0; }
+  section.about h1 {
+    font-size: 2em;
+    font-weight: bold; }
   section.about h2 {
-    text-align: center;
     padding: 0 0.5em;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 0; }
   section.about h3 {
     text-align: justify;
+    font-size: 1.2em;
     padding: 0 0.5em; }
     @media only screen and (min-width: 768px) {
       section.about h3 {
-        padding: 0 3em;
         padding-right: 2em; } }
   section.about i {
-    color: #fad100;
-    margin-right: 0.5em; }
-  section.about img {
+    color: #252525;
+    margin: .3em;
+    margin-right: .5em; }
+  section.about .about-photo img {
     background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
-    padding: 1em;
-    margin-top: 0.5em;
+    padding: .5em;
     display: none; }
     @media only screen and (min-width: 992px) {
-      section.about img {
+      section.about .about-photo img {
         display: block; } }
-  @media only screen and (min-width: 992px) {
-    section.about {
-      padding: 15em 3em;
-      padding-bottom: 5em; } }
+  section.about .about-content {
+    background: rgba(255, 225, 71, 0.3);
+    border: 1px solid rgba(255, 225, 71, 0.6);
+    padding: 1em 0; }
+    @media only screen and (min-width: 992px) {
+      section.about .about-content {
+        padding: 4em 2em; } }
 
 section.work {
   background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
@@ -225,17 +238,17 @@ section.work {
   section.work .project:hover > .tile-2 {
     top: 0; }
   section.work .house {
-    background: url(../img/house.jpg) center no-repeat;
+    background: url(../media/house.jpg) center no-repeat;
     background-size: cover; }
   section.work .paint {
-    background: url(../img/paint.jpg) center no-repeat;
+    background: url(../media/paint.jpg) center no-repeat;
     background-size: cover; }
   section.work .plumb {
-    background: url(../img/plumb.jpg) center no-repeat;
+    background: url(../media/plumb.jpg) center no-repeat;
     background-size: cover; }
 
 section.contact {
-  background: url("../img/contact.jpg") no-repeat center;
+  background: url("../media/contact.jpg") no-repeat center;
   background-size: cover;
   position: relative;
   color: #eaeaea;
@@ -329,7 +342,7 @@ section.contact {
 footer {
   background: #050505;
   padding: 1em 0; }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     footer {
       padding: 4em 0; } }
   footer .footer-up a {
@@ -338,6 +351,7 @@ footer {
     width: 1.8em;
     height: 1.8em;
     font-size: 1.5em;
+    margin: 1em 0;
     margin-right: 0.2em;
     padding-top: 0.1em;
     border-radius: 100%;
@@ -365,19 +379,36 @@ footer {
   footer .footer-up .column-info h3 {
     text-align: left; }
   footer .footer-up .column-stats {
-    text-align: center;
-    padding: 0 8em; }
+    text-align: center; }
+    @media only screen and (min-width: 992px) {
+      footer .footer-up .column-stats {
+        padding: 0 8em; } }
     footer .footer-up .column-stats h3 {
-      font-size: 4em;
+      font-size: 2em;
       color: #ffe147; }
+      @media only screen and (min-width: 768px) {
+        footer .footer-up .column-stats h3 {
+          font-size: 3em; } }
+      @media only screen and (min-width: 992px) {
+        footer .footer-up .column-stats h3 {
+          font-size: 4em; } }
     footer .footer-up .column-stats p {
       margin-top: -1em;
-      font-size: .8em;
+      font-size: .6em;
       font-weight: bold; }
+      @media only screen and (min-width: 768px) {
+        footer .footer-up .column-stats p {
+          font-size: .9em; } }
   footer .footer-up .column-invite {
-    text-align: right; }
+    text-align: center; }
     footer .footer-up .column-invite h3 {
-      text-align: right; }
+      text-align: center; }
+      @media only screen and (min-width: 768px) {
+        footer .footer-up .column-invite h3 {
+          text-align: right; } }
+    @media only screen and (min-width: 768px) {
+      footer .footer-up .column-invite {
+        text-align: right; } }
   footer .footer-down {
     font-size: 1.1em;
     font-weight: bold;
@@ -393,5 +424,7 @@ footer {
       color: #ffe147; }
       footer .footer-down a:hover {
         color: #e0bb00; }
+  footer span.sources {
+    font-size: .8em; }
 
 /*# sourceMappingURL=style.css.map */

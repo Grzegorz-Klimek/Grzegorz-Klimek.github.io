@@ -79,6 +79,12 @@ h3 {
       }
     }
   }
+  .navbar-header {
+    min-height: 75px;
+  }
+  .navbar-toggle {
+    margin-top: 20px;
+  }
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -104,7 +110,7 @@ section.home {
   position: relative;
   background: no-repeat center scroll;
   text-align: center;
-  background-image: url(../img/home.jpg);
+  background-image: url(../media/tools.jpg);
   background-size: cover;
   @media #{$medium}{
     background-size: 100%;
@@ -170,41 +176,54 @@ section.about {
   @include background-light();
   color: $fontDark;
   padding: 1em;
+  @media #{$medium}{
+    padding: 10em 3em;
+    padding-bottom: 5em;
+  }
   h1, h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
   }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+  }
   h2 {
-    text-align: center;
     padding: 0 0.5em;
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 0;
   }
   h3 {
     text-align: justify;
+    font-size: 1.2em;
     padding: 0 0.5em;
     @media #{$small} {
-      padding: 0 3em;
       padding-right: 2em;
     }
   }
   i {
-    color: darken($accent, 15%);
-    margin-right: 0.5em;
+    color: $fontDark;
+    margin: .3em;
+    margin-right: .5em;
   }
-  img {
-    @include accent-gradient();
-    padding: 1em;
-    margin-top: 0.5em;
-    display: none;
-    @media #{$medium}{
-      display: block;
+  .about-photo {
+    img {
+      @include accent-gradient();
+      padding: .5em;
+      display: none;
+      @media #{$medium}{
+        display: block;
+      }
     }
   }
-  @media #{$medium}{
-    padding: 15em 3em;
-    padding-bottom: 5em;
+  .about-content {
+    background: rgba(255, 225, 71, .3);
+    border: 1px solid rgba(255, 225, 71, .6);
+    padding: 1em 0;
+    @media #{$medium}{
+      padding: 4em 2em;
+    }
   }
 }
 
@@ -278,15 +297,15 @@ section.work {
     top: 0;
   }
   .house {
-    background: url(../img/house.jpg) center no-repeat;
+    background: url(../media/house.jpg) center no-repeat;
     background-size: cover;
   }
   .paint {
-    background: url(../img/paint.jpg) center no-repeat;
+    background: url(../media/paint.jpg) center no-repeat;
     background-size: cover;
   }
   .plumb {
-    background: url(../img/plumb.jpg) center no-repeat;
+    background: url(../media/plumb.jpg) center no-repeat;
     background-size: cover;
   }
 }
@@ -296,7 +315,7 @@ section.work {
 //*************************
 
 section.contact {
-  background: url("../img/contact.jpg") no-repeat center;
+  background: url("../media/contact.jpg") no-repeat center;
   background-size: cover;
   position: relative;
   color: $fontBasic;
@@ -408,7 +427,7 @@ section.contact {
 footer {
   @include background-dark();
   padding: 1em 0;
-  @media #{$medium}{
+  @media #{$small}{
     padding: 4em 0;
   }
   .footer-up {
@@ -418,6 +437,7 @@ footer {
       width: 1.8em;
       height: 1.8em;
       font-size: 1.5em;
+      margin: 1em 0;
       margin-right: 0.2em;
       padding-top: 0.1em;
       border-radius: 100%;
@@ -455,22 +475,39 @@ footer {
     }
     .column-stats {
       text-align: center;
-      padding: 0 8em;
+      @media #{$medium} {
+        padding: 0 8em;
+      }
       h3 {
-        font-size: 4em;
+        font-size: 2em;
         color: $accent;
+        @media #{$small} {
+          font-size: 3em;
+        }
+        @media #{$medium} {
+          font-size: 4em;
+        }
       }
       p {
         margin-top: -1em;
-        font-size: .8em;
+        font-size: .6em;
         font-weight: bold;
+        @media #{$small} {
+          font-size: .9em;
+        }
       }
     }
     .column-invite {
       h3 {
+        text-align: center;
+        @media #{$small} {
+          text-align: right;
+        }
+      }
+      text-align: center;
+      @media #{$small} {
         text-align: right;
       }
-      text-align: right;
     }
   }
   .footer-down {
@@ -490,5 +527,8 @@ footer {
         color: darken($accent, 20%);
       }
     }
+  }
+  span.sources {
+    font-size: .8em;
   }
 }
