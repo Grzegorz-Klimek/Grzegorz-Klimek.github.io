@@ -1,5 +1,5 @@
 $('#animated-button').hover(
     function() {
-        $(this).toggleClass('bounce');
+        $(this).toggleClass('tada');
     }
 )
