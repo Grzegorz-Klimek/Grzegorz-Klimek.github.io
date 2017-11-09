@@ -297,8 +297,12 @@ section.contact {
   background-attachment: fixed;
   margin-bottom: -3px;
   h1 {
+    border: 1px solid darken($fontDark, 2%);
+    background-color: rgba(50, 50, 50, .5);
+    padding: 1em 0;
     font-size: 2.2em;
-    margin: 1em;
+    margin: .5em;
+    margin-bottom: -.5em;
   }
   .container-fluid {
     padding: 1em;
@@ -351,9 +355,11 @@ section.contact {
     }
   }
   .form-message {
-    padding-top: 0;
+    padding: 0;
     @media #{$medium} {
-      padding-top: 3em;
+      padding: 2.6em 0;
+      border: 1px solid darken($fontDark, 2%);
+      background-color: rgba(50, 50, 50, .5);
     }
     .contactform-message {
       background: $fontDark;
