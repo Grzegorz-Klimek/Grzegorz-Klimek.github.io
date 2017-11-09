@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding-top: 60px;
   font-family: 'Roboto', sans-serif;
-  color: #eee; }
+  color: #eaeaea; }
 
 h1 {
   font-size: 3em; }
@@ -26,7 +26,7 @@ h3 {
   width: 100%;
   height: 100%;
   display: block;
-  opacity: 0.6; }
+  opacity: 0.7; }
 
 .highlight {
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
@@ -55,7 +55,7 @@ h3 {
 .navbar-inverse .navbar-nav > li > a {
   transition: all 0.5s;
   margin: 10px 15px;
-  color: #bbbbbb;
+  color: #b7b7b7;
   border-radius: 2px 2px 0 0;
   border-bottom: 3px solid transparent; }
   .navbar-inverse .navbar-nav > li > a:hover {
@@ -92,7 +92,7 @@ section.home {
     background: #050505;
     font-size: 3em;
     margin: 0.2em;
-    color: #eee;
+    color: #eaeaea;
     padding: 0.5em;
     border-radius: 100%; }
   section.home .btn-custom {
@@ -101,7 +101,7 @@ section.home {
     justify-content: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     background: #050505;
-    color: #eee;
+    color: #eaeaea;
     font-size: 1em;
     width: 90%;
     transition: all 0.5s;
@@ -196,14 +196,14 @@ section.work {
     height: 100%;
     flex-direction: column;
     top: -300px;
-    color: #eee; }
+    color: #eaeaea; }
     section.work .tile-2 i {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
       background: #050505;
       font-size: 3em;
       padding: 0.5em;
       display: block;
-      color: #eee;
+      color: #eaeaea;
       border: 3px solid #F1D342;
       border-radius: 100%; }
     section.work .tile-2 .content {
@@ -234,7 +234,7 @@ section.contact {
   background: url("../img/contact.jpg") no-repeat center;
   background-size: cover;
   position: relative;
-  color: #eee;
+  color: #eaeaea;
   text-align: center;
   background-attachment: fixed; }
   section.contact h1 {
@@ -248,6 +248,21 @@ section.contact {
     @media only screen and (min-width: 992px) {
       section.contact .container-fluid {
         padding: 8em 3em; } }
+  section.contact form {
+    margin-bottom: 3em;
+    font-size: 1.3em; }
+    section.contact form span.fa {
+      margin-right: 0.5em; }
+    section.contact form .form-photo {
+      border-radius: 100%;
+      width: 200px;
+      margin: 0 auto;
+      margin-bottom: 1em; }
+    section.contact form input#contactform-email, section.contact form input#contactform-name {
+      width: 100%; }
+    section.contact form textarea {
+      margin: 1em;
+      width: 100%; }
 
 footer {
   background: #050505;
@@ -269,8 +284,8 @@ footer {
     text-decoration: none;
     color: #F1D342; }
     footer .footer-up a:hover {
-      color: #eee;
-      border-color: #eee; }
+      color: #eaeaea;
+      border-color: #eaeaea; }
   footer .footer-up h3 {
     text-align: center;
     margin-bottom: 0.5em; }

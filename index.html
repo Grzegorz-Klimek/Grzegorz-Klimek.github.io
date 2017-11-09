@@ -150,17 +150,25 @@
             <div class="row">
                 <div class="col-md-12"><p>
                     <h1>Skontaktuj się ze mną <span class="highlight">już teraz!</span></h1><br><br>
-                    <form>
-                        <label for="name"><span class="fa fa-user" aria-hidden="true"></span>Name</label><br/>
-                        <input type="text" id="name"><br/>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <form>
+                                <img class="form-photo img-responsive" src="media/photo.png"/>
+                                <label for="contactform-name"><span class="fa fa-user" aria-hidden="true"></span>Imię i nazwisko</label><br/>
+                                <input type="text" id="contactform-name"><br/>
 
-                        <label for="contactform-email"><span class="fa fa-envelope" aria-hidden="true"></span>E-mail</label><br/>
-                        <input type="email" id="contactform-email"><br/>
-
-                        <label for="contactform-message"><span class="fa fa-comment" aria-hidden="true"></span>Wiadomość</label><br/>
-                        <input type="email" id="contactform-message"><br/>
-                        <input disabled type="submit" value="Wyślij!"/>
-                    </form>
+                                <label for="contactform-email"><span class="fa fa-envelope" aria-hidden="true"></span>E-mail</label><br/>
+                                <input type="email" id="contactform-email"><br/>
+                            </form>
+                        </div>
+                        <div class="col-md-8">
+                            <form>
+                                <label for="contactform-message"><span class="fa fa-comment" aria-hidden="true"></span>Wiadomość</label><br/>
+                                <textarea id="contactform-message"></textarea><br/>
+                                <input disabled type="submit" value="Wyślij!"/>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,6 +207,8 @@
         </div>
         <div class="footer-down">
             <p>Written & coded in 2017 by <a href="http://grzegorzklimek.com">Grzegorz Klimek</a></p>
+            <span>Open license sources:</span>
+            <span>Photo of man by Cristian Lozan</span>
         </div>
     </div>
 </footer>
