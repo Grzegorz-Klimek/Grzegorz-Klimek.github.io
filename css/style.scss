@@ -62,17 +62,21 @@ h3 {
     margin-right: 0.5em;
   }
   .navbar-brand {
+    color: $accent;
     .navbar-photo {
+      @include custom-transition();
       width: 50px;
       border-radius: 100%;
       margin-right: 12px;
     }
     @include custom-transition();
-    color: $accent;
     font-size: 1.5em;
     &:hover {
-      transform: scale(1.05);
+      color: $accent;
       cursor: pointer;
+      .navbar-photo {
+        transform: scaleX(-1);
+      }
     }
   }
 }
@@ -403,9 +407,9 @@ section.contact {
 
 footer {
   @include background-dark();
-  padding: 1em;
+  padding: 1em 0;
   @media #{$medium}{
-    padding: 5em 3em;
+    padding: 4em 0;
   }
   .footer-up {
     a {
@@ -427,29 +431,52 @@ footer {
       }
     }
     h3 {
-      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
       margin-bottom: 0.5em;
     }
+    p {
+      font-size: 1em;
+    }
     ul {
-      text-transform: uppercase;
       list-style-type: none;
       color: $accent;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
-    .invite {
-      text-align: center;
-    }
-    .tile {
+    .column {
+      text-align: justify;
       padding-bottom: 2em;
+    }
+    .column-info {
+      h3 {
+        text-align: left;
+      }
+    }
+    .column-stats {
+      text-align: center;
+      padding: 0 8em;
+      h3 {
+        font-size: 4em;
+        color: $accent;
+      }
+      p {
+        margin-top: -1em;
+        font-size: .8em;
+        font-weight: bold;
+      }
+    }
+    .column-invite {
+      h3 {
+        text-align: right;
+      }
+      text-align: right;
     }
   }
   .footer-down {
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.05em;
-    padding: 3em 0;
     text-align: center;
     margin-top: 0;
     @media #{$medium}{
