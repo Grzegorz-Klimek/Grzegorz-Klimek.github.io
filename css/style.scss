@@ -214,17 +214,16 @@ section.work {
     padding: 8em 3em;
   }
   .project {
+    @include custom-transition();
     @include accent-gradient();
     position: relative;
     height: 300px;
-    border: 3px solid $accent;
     margin: -15px;
-    transition: all 1s;
     overflow: hidden
   }
   .tile-1 {
+    @include custom-transition();
     @include flex-align();
-    transition: all 1s;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -234,7 +233,7 @@ section.work {
     @include flex-align();
     @include accent-gradient();
     @include shadow-text();
-    transition: all 1s;
+    @include custom-transition();
     position: absolute;
     width: 100%;
     height: 100%;

@@ -29,5 +29,5 @@
 }
 
 @mixin custom-transition() {
-  transition: color .3s, background .3s, transform .3s;
+  transition: color .3s, background .3s, transform .3s, top .3s;
 }
