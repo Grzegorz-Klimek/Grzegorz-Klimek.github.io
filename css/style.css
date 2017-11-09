@@ -248,7 +248,7 @@ section.contact {
   section.contact form {
     font-size: 1.3em; }
     section.contact form input, section.contact form textarea {
-      background: #1b1b1b;
+      background: #222222;
       outline: none;
       margin: 1em 0;
       min-height: 2em;
@@ -265,7 +265,8 @@ section.contact {
     border-radius: 3px; }
     @media only screen and (min-width: 992px) {
       section.contact .form-info {
-        border: 7px solid #202020; } }
+        border: 1px solid #202020;
+        background-color: rgba(50, 50, 50, 0.5); } }
     section.contact .form-info .form-photo {
       border-radius: 100%;
       width: 200px;

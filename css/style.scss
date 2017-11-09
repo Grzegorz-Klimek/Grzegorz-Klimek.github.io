@@ -310,7 +310,7 @@ section.contact {
   form {
     font-size: 1.3em;
     input, textarea {
-      background: darken($fontDark, 4%);
+      background: darken($fontDark, 1%);
       outline: none;
       margin: 1em 0;
       min-height: 2em;
@@ -328,7 +328,8 @@ section.contact {
     border: none;
     padding: 1em 0;
     @media #{$medium} {
-      border: 7px solid darken($fontDark, 2%);
+      border: 1px solid darken($fontDark, 2%);
+      background-color: rgba(50, 50, 50, .5);
     }
     border-radius: 3px;
     .form-photo {
