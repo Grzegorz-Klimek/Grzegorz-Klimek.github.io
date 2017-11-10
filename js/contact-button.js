@@ -1,5 +1,6 @@
-$('#animated-button').hover(
+$('#contact-button').hover(
     function() {
         $(this).toggleClass('tada');
     }
 );
+
