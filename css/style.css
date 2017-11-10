@@ -22,7 +22,7 @@ h3 {
 
 .dark-overlay {
   position: absolute;
-  background-color: #252525;
+  background-color: #0c0c0c;
   width: 100%;
   height: 100%;
   display: block;
@@ -30,7 +30,16 @@ h3 {
 
 .highlight {
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-  color: #ffd914; }
+  color: #ffe147; }
+
+::-webkit-scrollbar {
+  width: 15px; }
+
+::-webkit-scrollbar-track {
+  background: black; }
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad); }
 
 .navbar {
   background: #050505;
@@ -44,10 +53,10 @@ h3 {
     margin-right: 0.5em; }
   .navbar .navbar-brand {
     color: #ffe147;
-    transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
+    transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
     font-size: 1.5em; }
     .navbar .navbar-brand .navbar-photo {
-      transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
+      transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
       width: 50px;
       border-radius: 100%;
       margin-right: 12px; }
@@ -69,7 +78,7 @@ h3 {
   border-bottom: 3px solid transparent; }
   .navbar-inverse .navbar-nav > li > a:hover {
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    border-color: #ffdd2e;
+    border-color: #ffe147;
     color: #ffe147;
     cursor: pointer; }
 
@@ -133,7 +142,7 @@ section.home {
         width: 30%; } }
 
 section.about {
-  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
+  background: #050505;
   color: #252525;
   padding: 2em .5em;
   padding-top: 4em;
@@ -144,7 +153,8 @@ section.about {
       padding-bottom: 5em; } }
   section.about h1, section.about h2 {
     text-align: left;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    color: #9e9e9e; }
   section.about h1 {
     font-size: 2em;
     font-weight: bold; }
@@ -161,7 +171,7 @@ section.about {
       section.about h3 {
         padding-right: 2em; } }
   section.about i {
-    color: #252525;
+    color: #9e9e9e;
     margin: .3em; }
     @media only screen and (min-width: 992px) {
       section.about i {
@@ -172,61 +182,62 @@ section.about {
     section.about .about-photo img {
       background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
       display: none;
-      transform: scale(1.3) scaleX(-1); }
+      transform: scaleX(-1); }
       @media only screen and (min-width: 1200px) {
         section.about .about-photo img {
           display: block; } }
       @media only screen and (min-width: 1200px) {
         section.about .about-photo img {
-          margin: 1.5em 3em 0 -2em;
-          border-radius: 15px; } }
+          margin: 1.5em 3em 0 -5em;
+          border-radius: 10px; } }
   section.about .about-content {
     position: relative;
     z-index: 2;
-    background: rgba(255, 225, 71, 0.5);
     padding: 1em;
-    border-radius: 5px; }
+    border-radius: 12px; }
     @media only screen and (min-width: 992px) {
       section.about .about-content {
         padding: 4em;
+        padding-top: 3em;
         border-radius: 15px; } }
 
 section.work {
-  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/az_subtle.png);
+  background: #050505;
   text-align: center;
   color: #252525;
   padding: 3em 1em; }
   @media only screen and (min-width: 992px) {
     section.work {
-      padding: 8em 3em; } }
+      padding: 6em;
+      padding-top: 0; } }
   section.work .project {
-    transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
-    background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
+    transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
     position: relative;
+    z-index: 3;
     height: 300px;
     margin: -15px;
     overflow: hidden; }
   section.work .tile-1 {
-    transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
+    transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0; }
+    bottom: 0; }
   section.work .tile-2 {
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(to top right, #fff2ad, #ffe147, #fff2ad);
     text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
-    transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
+    transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
     position: absolute;
     width: 100%;
     height: 100%;
     flex-direction: column;
-    top: -300px;
+    bottom: -300px;
     color: #eaeaea; }
     section.work .tile-2 i {
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -248,18 +259,20 @@ section.work {
         text-align: left;
         list-style-type: square; }
   section.work .project:hover > .tile-1 {
-    top: 300px; }
+    bottom: 300px; }
   section.work .project:hover > .tile-2 {
-    top: 0; }
+    bottom: 0; }
   section.work .house {
     background: url(../media/house.jpg) center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    border-radius: 10px 0 0 10px; }
   section.work .paint {
     background: url(../media/paint.jpg) center no-repeat;
     background-size: cover; }
   section.work .plumb {
     background: url(../media/plumb.jpg) center no-repeat;
-    background-size: cover; }
+    background-size: cover;
+    border-radius: 0 10px 10px 0; }
 
 section.contact {
   background: url("../media/contact.jpg") no-repeat center;
@@ -341,7 +354,7 @@ section.contact {
           width: 90%;
           padding-top: 5em; } }
     section.contact .form-message input[type="submit"] {
-      transition: color .3s, background .3s, transform .3s, top .3s, background-image .3s;
+      transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
       background-image: linear-gradient(120deg, #f6d365 0%, #ffe147 100%);
       border: none;
       color: #181818;
@@ -427,7 +440,7 @@ footer {
     font-size: 1.1em;
     font-weight: bold;
     letter-spacing: 0.05em;
-    text-align: center;
+    text-align: left;
     margin-top: 0; }
     @media only screen and (min-width: 992px) {
       footer .footer-down {
@@ -438,7 +451,10 @@ footer {
       color: #ffe147; }
       footer .footer-down a:hover {
         color: #e0bb00; }
-  footer span.sources {
-    font-size: .8em; }
+    footer .footer-down p {
+      margin-bottom: 2em; }
+
+span.sources {
+  font-size: .8em; }
 
 /*# sourceMappingURL=style.css.map */
