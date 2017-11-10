@@ -230,7 +230,6 @@ section.about {
   color: $fontDark;
   padding: 2em .5em;
   padding-top: 4em;
-  overflow: hidden;
   @media #{$medium}{
     padding: 10em 3em;
     padding-bottom: 5em;
@@ -252,8 +251,10 @@ section.about {
   }
   h3 {
     text-align: justify;
+    color: darken($fontBasic, 30%);
     font-size: 1.2em;
     padding: 0 0.5em;
+    text-shadow: -2px 2px 2px black;
     @media #{$small} {
       padding-right: 2em;
     }
@@ -290,6 +291,22 @@ section.about {
       padding: 4em;
       padding-top: 3em;
       border-radius: 15px;
+    }
+    @media #{$large} {
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        left: -60px;
+        top: 150px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 300px 0 300px 500px;
+        border-color: transparent transparent transparent $accent;
+        opacity: .3;
+      }
     }
   }
 }
