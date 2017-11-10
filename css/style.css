@@ -268,8 +268,8 @@ section.work {
     position: relative;
     z-index: 3;
     height: 300px;
-    margin: -15px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-bottom: 50px; }
   section.work .tile-1 {
     transition: color .3s, background .3s, transform .3s, top .3s, bottom .3s,  background-image .3s;
     display: flex;

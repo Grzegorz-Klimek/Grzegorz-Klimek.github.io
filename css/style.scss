@@ -325,8 +325,8 @@ section.work {
     position: relative;
     z-index: 3;
     height: 300px;
-    margin: -15px;
     overflow: hidden;
+    margin-bottom: 50px;
   }
   .tile-1 {
     @include custom-transition();
