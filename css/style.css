@@ -349,15 +349,13 @@ section.work {
     bottom: 0; }
   section.work .house {
     background: url(../media/house.jpg) center no-repeat;
-    background-size: cover;
-    border-radius: 10px 0 0 10px; }
+    background-size: cover; }
   section.work .paint {
     background: url(../media/paint.jpg) center no-repeat;
     background-size: cover; }
   section.work .plumb {
     background: url(../media/plumb.jpg) center no-repeat;
-    background-size: cover;
-    border-radius: 0 10px 10px 0; }
+    background-size: cover; }
 
 section.contact {
   background: url("../media/contact.jpg") no-repeat center;
