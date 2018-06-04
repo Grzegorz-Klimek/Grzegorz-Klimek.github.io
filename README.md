@@ -1,1 +1,1 @@
-Projekt statycznej, rosponsywnej witryny internetowej mogącej służyć jako wizytówka osobista. 
+Ten projekt przedstawia statyczną, reponsywną witrynę internetową, która może służyć jako wizytówka osobista.
